@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+      <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/220px-QRcódigo_portada_wikipedia_español_" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_marginLeft="14dp"
+          android:layout_toRightOf="@+id/imageView1"
+          android:text="Max Score"
+          android:textAppearance="?android:attr/textAppearanceLarge" />
+
+      <TextView
+          android:id="@+id/textView2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBottom="@+id/imageView1"
+          android:layout_alignLeft="@+id/textView1"
+          android:text="Min Score"
+          android:textAppearance="?android:attr/textAppearanceMedium" />
+
+      <ProgressBar
+          android:id="@+id/progressBar1"
+          style="?android:attr/progressBarStyleHorizontal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/imageView1"
+          android:layout_marginTop="33dp" />
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/progressBar1"
+          android:layout_marginTop="26dp"
+          android:text="Total intents"
+          android:textAppearance="?android:attr/textAppearanceLarge" />
+
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/textView3"
+          android:layout_marginTop="17dp"
+          android:text="Pending" />
+
+</RelativeLayout>
