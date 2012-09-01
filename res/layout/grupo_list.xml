@@ -12,9 +12,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ListView
-        android:id="@+id/listView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:id="@android:id/list"
+        android:cacheColorHint="@android:color/transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="396dp"
+        android:drawSelectorOnTop="false" >
     </ListView>
 
 </LinearLayout>
