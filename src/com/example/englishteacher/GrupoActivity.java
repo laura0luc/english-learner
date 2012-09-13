@@ -18,7 +18,7 @@ import pojo.Grupo;
 
 public class GrupoActivity extends ListActivity {
 	
-	private List<Grupo> grupos;
+	private ArrayList<Grupo> grupos;
 
 
 	@Override
