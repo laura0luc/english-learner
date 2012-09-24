@@ -6,6 +6,9 @@ public class Grupo implements Serializable{
 	private String clave;
 	private String nombre;
 	private int grupo;
+	private String id;
+	
+	
 	
 	public String getClave() {
 		return clave;
@@ -27,6 +30,12 @@ public class Grupo implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return clave+"-"+grupo+" "+nombre;
+		return nombre;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 }

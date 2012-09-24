@@ -24,13 +24,16 @@ public class LoginActivity extends Activity {
 	}
 	
 	public void login(View v){
+		v.setBackgroundColor(0x0000FF00 );
+		v.invalidate();
 		Log.i("LOGIN","Etrando al login");
-		String user= ((EditText)this.findViewById(R.id.editText1)).toString().trim();
-		String pass=((EditText)this.findViewById(R.id.editText2)).toString().trim();
+		String user= ((EditText)this.findViewById(R.id.editText1)).getText().toString();
+		String pass=((EditText)this.findViewById(R.id.editText2)).getText().toString();
+		
 		LoginTask t = new LoginTask(this, "login"); 
+		Log.i("LOGIN", "user: "+user+" pass: "+pass);
 		t.execute(user, pass);
 		StringBuffer session= null;
-
 		try {
 			session = t.get(10, TimeUnit.SECONDS);
 		} catch (InterruptedException e) {
@@ -49,6 +52,7 @@ public class LoginActivity extends Activity {
 
 		}else{
 			Intent next=new Intent(LoginActivity.this, GrupoActivity.class);
+			next.putExtra("username", user);
 			startActivity(next);
 		}
 
