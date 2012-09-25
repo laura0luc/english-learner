@@ -20,7 +20,8 @@
             android:name=".JuegoActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden" >
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
