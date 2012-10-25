@@ -9,10 +9,21 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Build;
 import android.util.Log;
+
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
+
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+
+
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Toast;
+
+
 
 public class JuegoActivity extends Activity implements SensorEventListener {
 
@@ -44,9 +55,9 @@ public class JuegoActivity extends Activity implements SensorEventListener {
         }
         Display display=window.getDefaultDisplay();
         
-        
-        pelota.setxMax((float)display.getWidth() - 50);
-        pelota.setyMax((float)display.getHeight()-50);
+        Log.i("ACTIVIDAD", " medidas x: "+(float)display.getWidth()+" y:"+(float)display.getHeight());
+        pelota.setxMax((float)display.getWidth()-10);
+        pelota.setyMax((float)display.getHeight()-10);
 	}
 	
 	@Override
@@ -57,7 +68,7 @@ public class JuegoActivity extends Activity implements SensorEventListener {
 	
 	@Override
     protected void onResume() {
-        mgr.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_GAME);
+        mgr.registerListener(this, accelerometer, 500);
     	super.onResume();
     }
 	
@@ -79,6 +90,4 @@ public class JuegoActivity extends Activity implements SensorEventListener {
 		 pelota.update(event.values[1], event.values[0]);
 		 //Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG);
 	 }
-	 
-
 }
